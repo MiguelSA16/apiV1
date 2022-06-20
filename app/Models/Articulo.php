@@ -12,6 +12,6 @@ class Articulo extends Model
 
     public function grupos(){        
         // tiene muchos
-        return $this->hasMany(Articulo::class,'grupo','codigo')->orderBy('n_orden');
+        return $this->hasMany(Articulo::class,'grupo_portada','codigo')->orderBy('n_orden');
     }   
 }

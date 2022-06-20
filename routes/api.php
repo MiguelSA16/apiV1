@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticuloController;
 use App\Http\Controllers\FamiliaCotroller;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -15,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-
 Route::group(['middleware'=>'auth:api'], function(){
     Route::get('user',[UserController::class,'user']);
     Route::post('logout',[UserController::class,'logout']);
@@ -32,3 +31,7 @@ Route::post('login',[UserController::class,'login']);
 Route::get('familias',[FamiliaCotroller::class,'index']);
 Route::get('listar_articulos/{url_familia}',[FamiliaCotroller::class,'listar_articulos']);
 Route::get('familia/{url_familia}',[FamiliaCotroller::class,'familia']);
+
+//rutas de articulos
+Route::get('articulos',[ArticuloController::class,'index']);
+Route::put('grupo_articulos/{articulo}',[ArticuloController::class,'updateGroup']);

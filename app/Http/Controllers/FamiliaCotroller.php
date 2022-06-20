@@ -33,7 +33,7 @@ class FamiliaCotroller extends Controller
         $articulos = ArticuloResource::
             collection(
                 Articulo::where('familia_id', $familia_actual->id)
-                ->where('grupo','padre')
+                ->where('grupo_portada','portada')
                 ->where('baja','0')
                 ->orderBy('n_orden')
                 ->get());        

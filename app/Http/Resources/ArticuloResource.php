@@ -18,7 +18,7 @@ class ArticuloResource extends JsonResource
             'id'                => $this->id,
             'nombre'            => $this->nombre,
             'referencia'        => $this->codigo,
-            'grupo'             => $this->grupo,
+            'portada'           => $this->portada,
             'imagen'            => $this->imagen,
             'agrupado_por'      => $this->agrupado_por,
             'caracteristica'    => $this->caracteristica,
